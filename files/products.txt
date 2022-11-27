@@ -1,0 +1,23 @@
+[
+  {
+    "id": "1",
+    "name": "Converse Boots",
+    "description": "Colors red, black, green, purple",
+    "image": "https://cf.shopee.com.co/file/9fa32648632ea5a9d78ae7c2c02ed1ab_tn",
+    "price": 40
+  },
+  {
+    "id": "2",
+    "name": "Converse Boots",
+    "description": "Colors black, white",
+    "image": "https://www.tienda.eloy.com.ar/media/catalog/product/cache/d38be127ecf06dfec35606e11d013cfe/9/5/950-157197C-NEGRO_1_20.jpg",
+    "price": 30
+  },
+  {
+    "id": "3",
+    "name": "Vans",
+    "description": "Colors black, white, blue",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpQ7tUKnl2OyEnzFP76q-mQr0D-GyV-ZxQow&usqp=CAU",
+    "price": 35
+  }
+]

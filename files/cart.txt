@@ -1,0 +1,32 @@
+[
+  {
+    "products": [],
+    "id": "936ee6b6-24fc-4dd8-b3d1-a63c7a4b2156"
+  },
+  {
+    "products": [
+      {
+        "id": "1",
+        "name": "Converse Boots",
+        "description": "Colors red, black, green, purple",
+        "image": "https://cf.shopee.com.co/file/9fa32648632ea5a9d78ae7c2c02ed1ab_tn",
+        "price": 40
+      },
+      {
+        "id": "1",
+        "name": "Converse Boots",
+        "description": "Colors red, black, green, purple",
+        "image": "https://cf.shopee.com.co/file/9fa32648632ea5a9d78ae7c2c02ed1ab_tn",
+        "price": 40
+      },
+      {
+        "id": "1",
+        "name": "Converse Boots",
+        "description": "Colors red, black, green, purple",
+        "image": "https://cf.shopee.com.co/file/9fa32648632ea5a9d78ae7c2c02ed1ab_tn",
+        "price": 40
+      }
+    ],
+    "id": "189205e5-64a3-44ff-98fc-af6a1c43873f"
+  }
+]
