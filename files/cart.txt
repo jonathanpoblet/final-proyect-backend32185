@@ -1,32 +1,32 @@
 [
   {
     "products": [],
-    "id": "936ee6b6-24fc-4dd8-b3d1-a63c7a4b2156"
+    "identificator": "936ee6b6-24fc-4dd8-b3d1-a63c7a4b2156"
   },
   {
     "products": [
       {
-        "id": "1",
-        "name": "Converse Boots",
-        "description": "Colors red, black, green, purple",
-        "image": "https://cf.shopee.com.co/file/9fa32648632ea5a9d78ae7c2c02ed1ab_tn",
-        "price": 40
+        "name": "Vans",
+        "description": "Colors black, white, blue",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpQ7tUKnl2OyEnzFP76q-mQr0D-GyV-ZxQow&usqp=CAU",
+        "price": 35,
+        "identificator": "865f8ea9-529d-44d8-b231-21c277a75a7e"
       },
       {
-        "id": "1",
         "name": "Converse Boots",
-        "description": "Colors red, black, green, purple",
-        "image": "https://cf.shopee.com.co/file/9fa32648632ea5a9d78ae7c2c02ed1ab_tn",
-        "price": 40
+        "description": "Colors black, white",
+        "image": "https://www.tienda.eloy.com.ar/media/catalog/product/cache/d38be127ecf06dfec35606e11d013cfe/9/5/950-157197C-NEGRO_1_20.jpg",
+        "price": 30,
+        "identificator": "2f8fe3cd-4c35-4852-8231-a213bef47c4e"
       },
       {
-        "id": "1",
-        "name": "Converse Boots",
+        "name": "Jordan Boots",
         "description": "Colors red, black, green, purple",
         "image": "https://cf.shopee.com.co/file/9fa32648632ea5a9d78ae7c2c02ed1ab_tn",
-        "price": 40
+        "price": 40,
+        "identificator": "72f51fae-44d2-436c-adf8-b5b706ce585c"
       }
     ],
-    "id": "189205e5-64a3-44ff-98fc-af6a1c43873f"
+    "identificator": "189205e5-64a3-44ff-98fc-af6a1c43873f"
   }
 ]

@@ -13,8 +13,8 @@ const routerApiProducts = express.Router();
 //router products
 routerApiProducts.get('/', controllerGetProducts);
 routerApiProducts.get('/:id', controllerGetProductById);
-routerApiProducts.post('/',soloParaAdmin, controllerPostProduct);
-routerApiProducts.put('/:id',soloParaAdmin, controllerPutProductById);
-routerApiProducts.delete('/:id',soloParaAdmin, controllerDeleteProductById);
+routerApiProducts.post('/',controllerPostProduct);
+routerApiProducts.put('/:id',controllerPutProductById);
+routerApiProducts.delete('/:id',controllerDeleteProductById);
 
 export default routerApiProducts;

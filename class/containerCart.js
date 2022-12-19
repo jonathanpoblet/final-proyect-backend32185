@@ -1,4 +1,4 @@
-import fs, { read } from 'fs';
+import fs from 'fs';
 
 class ContainerCart {
 	#cartFile;
@@ -12,7 +12,7 @@ class ContainerCart {
 			const readFile = JSON.parse(
 				await fs.promises.readFile(this.#cartFile, "utf-8")
 			);
-			fs.writeFileSync(this.#cartFile, JSON.stringify([...readFile,cart] ,null,2));
+			await fs.promises.writeFile(this.#cartFile, JSON.stringify([...readFile,cart] ,null,2));
 			return readFile;
 		} catch (error) {
 			throw new Error("No cart save " + error);
@@ -24,37 +24,37 @@ class ContainerCart {
 			const readFile = JSON.parse(
 				await fs.promises.readFile(this.#cartFile, "utf-8")
 			);
-			const cartIndex = await readFile.findIndex((cart) => cart.id === id);
+			const cartIndex = await readFile.findIndex((cart) => cart.identificator === id);
 			readFile[cartIndex] = {products: []};
-			readFile[cartIndex].id = id;
-			fs.writeFileSync(this.#cartFile,JSON.stringify(readFile,null,2));
+			readFile[cartIndex].identificator = id;
+			await fs.promises.writeFile(this.#cartFile,JSON.stringify(readFile,null,2));
 			
 		} catch (error) {
 			throw new Error("No cart delete " + error);
 		}
 	}
 
-	async getById(id) {
+	async getCartById(id) {
 		try {
 			const readFile = JSON.parse(
 				await fs.promises.readFile(this.#cartFile, "utf-8")
 			);
-			const cartFound = await readFile.find((cart) => cart.id === id);
+			const cartFound = await readFile.find((cart) => cart.identificator === id);
 			return cartFound;
 		} catch (error) {
 			throw new Error("No cart found " + error);
 		}
 	}
 
-	async addProductsToCart(id,body){
+	async updateById(id,products,product){
 		try {
 			const readFile = JSON.parse(
 				await fs.promises.readFile(this.#cartFile, "utf-8")
 			);
-			const cartIndex = await readFile.findIndex((cart) => cart.id === id);
-			readFile[cartIndex].products.push(body);
-			fs.writeFileSync(this.#cartFile,JSON.stringify(readFile,null,2));
-			return body
+			const cartIndex = await readFile.findIndex((cart) => cart.identificator === id);
+			readFile[cartIndex].products.push(product);
+			await fs.promises.writeFile(this.#cartFile,JSON.stringify(readFile,null,2));
+			return product
 		} catch (error) {
 			throw new Error("No cart found " + error);
 		}
@@ -65,7 +65,7 @@ class ContainerCart {
 			const readFile = JSON.parse(
 				await fs.promises.readFile(this.#cartFile, "utf-8")
 			);
-			const foundCart = await readFile.find((cart) => cart.id === id);
+			const foundCart = await readFile.find((cart) => cart.identificator === id);
 			const productsOfFoundCart = foundCart.products;
 			return productsOfFoundCart
 		} catch (error) {
@@ -79,16 +79,16 @@ class ContainerCart {
 				await fs.promises.readFile(this.#cartFile, "utf-8")
 			);
 			const products = await this.getProductsOfCart(idCart);
-			const productIndexFound = products.findIndex((product) => product.id == idProduct);
-			const productFound = products.find((product) => product.id == idProduct);
-			const indexCart = await readFile.findIndex(cart => cart.id == idCart)
+			const productIndexFound = products.findIndex((product) => product.identificator == idProduct);
+			const productFound = products.find((product) => product.identificator == idProduct);
+			const indexCart = await readFile.findIndex(cart => cart.identificator == idCart)
 			readFile[indexCart].products.splice(productIndexFound,1);
-			fs.writeFileSync(this.#cartFile, JSON.stringify(readFile,null,2));
-			return productFound
+			await fs.promises.writeFile(this.#cartFile, JSON.stringify(readFile,null,2));
+			return productFound;
 		} catch (error) {
 			throw new Error("No cart delete " + error);
 		}
 	}
 }
 
-export default ContainerCart
+export default ContainerCart;
